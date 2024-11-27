@@ -8,7 +8,48 @@
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <title>fitness and wellness</title>
     </head>
-   
+    <style>
+        body {
+            background-color: rgb(219, 43, 43);
+            color: rgb(181, 33, 33);
+        }
+        .container {
+            width: 100%;
+            margin-top: 1rem;
+            margin-left: 2rem;
+            justify-content: center;
+        }
+        #map {
+            width: 26%; 
+            height: 200px;
+            border: 5px solid rgb(255, 255, 255);
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 20px; 
+            right: 20px; 
+        }
+
+        footer {
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            position: relative; 
+            min-height: 200px; 
+        }
+
+        footer .footer-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
     <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; height: 100%; overflow-x: hidden; background-color: #f4f3f2 ; justify-content: center;" >
     
         
