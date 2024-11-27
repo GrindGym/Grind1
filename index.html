@@ -1,0 +1,136 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <title>fitness and wellness</title>
+    </head>
+    <style>
+        body {
+            background-color: rgb(219, 43, 43);
+            color: rgb(181, 33, 33);
+        }
+        .container {
+            width: 100%;
+            margin-top: 1rem;
+            margin-left: 2rem;
+            justify-content: center;
+        }
+        #map {
+            width: 26%; 
+            height: 200px;
+            border: 5px solid rgb(255, 255, 255);
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 20px; 
+            right: 20px; 
+        }
+
+        footer {
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            position: relative; 
+            min-height: 200px; 
+        }
+
+        footer .footer-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+    <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; height: 100%; overflow-x: hidden; background-color: #f4f3f2 ; justify-content: center;" >
+    
+        <header style="display: flex; align-items: left; justify-content: left; gap: 20px;">
+            <img src="/logo fitness.jpg" alt="description" width="100" height="70">        
+        
+            <nav style="display: flex; justify-content: center; gap: 20px; width: 60%;">
+
+                
+        
+
+                <a  href="/startworkout.html" style= "    padding: 14px 20px; position: absolute;right:120px; text-decoration: none; color: black;font-family: 'Roboto', sa  ns-serif;">start for free</a>
+        <a  href="/log-in.html" style="padding: 14px 20px; position: absolute;right:50px; text-decoration: none; color: black;font-family: 'Roboto', sa  ns-serif;">Log 🇮🇳</a>
+
+        </nav>
+        </header>
+        <div class="container" style="display: grid; grid-template-columns: 1fr; gap: 0; width: 100vw; height: 100vh; max-width: 100%; max-height: 100%; padding: 0; overflow-y: auto;">
+            <div class="item" style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%; padding: 20px; text-align: center; border-radius: 0px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); position: relative;">
+                <div style="background-image: url(/weight-8246973_1920.jpg); background-position: center; background-size: cover; height: 100vh; width: 100%; position: absolute; top: 0; left: 0; z-index: -1; filter: blur(3px);"></div>
+                <p style="position: relative; z-index: 1; color: white; font-size: 1.5rem; max-width: 90%; margin: 0 auto; padding: 20px; background-color: rgba(0, 0, 0, 0.4); border-radius: 8px;">
+                    Our platform is dedicated to helping you achieve optimal well-being by offering personalized wellness plans, expert guidance, and a supportive community. </BR>Whether you’re looking to improve your fitness, mental health, or overall lifestyle, we’re here to guide you every step of the way.  
+                    <h1  style="position: absolute; bottom: 120px; right: 200px; z-index: 2;display: flex; padding: 25px 70px; color: rgba(255, 255, 255, 0.884); border: none; border-radius: 15px; font-size: 2rem; cursor: pointer; background-color: rgba(0, 0, 0, 0.4);  ;">Start your home wellness journey</h1>
+                    <a href="/log-in.html" style="position: absolute; bottom: 50px; right: 150px; z-index: 2; padding: 25px 70px; background-color: rgb(21, 0, 255); color: rgb(0, 0, 0); text-decoration: none; border-radius: 15px; font-size: 1rem; cursor: pointer;">
+                        Let's get started!
+                    </a>
+            </div>
+        </div>
+        <div class="item" style=  "background-color: #e4d8d8; color: rgb(247, 241, 241); display: flex; position: fixed; justify-content: center; align-items: center; flex-direction: column; width: 100%; height: 100vh; padding: 20px; text-align: center; border-radius: 0px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); position: relative;">
+            <img src="/pexels-ketut-subiyanto-5038851.jpg" alt="Image 3" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; filter: blur(1.5px);">
+            </a>
+            <p style="position: relative; z-index: 1; color: white; font-size: 1.5rem; max-width: 90%; margin: 0 auto; padding: 20px; background-color: rgba(0, 0, 0, 0.4); border-radius: 8px;">
+            "   Welcome to a space dedicated to your well-being. Whether you're looking for mindful tips, self-care inspiration, or expert advice, we're here to support you every step of the way. Start your day with positivity, embrace balance, and cultivate wellness in all areas of life."
+        </div>
+        <div class="item" style="background-color: #e4d8d8; color: rgb(247, 241, 241); display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%; height: 100vh; padding: 20px; text-align: center; border-radius: 0px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); position: relative;">
+            <img src="/pexels-ekaterina-bolovtsova-7113344.jpg" alt="Image 3" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; filter: blur(1.5px);">
+            <p style="position: relative; z-index: 1; color: white; font-size: 1.5rem; max-width: 90%; margin: 0 auto; padding: 20px; background-color: rgba(0, 0, 0, 0.4); border-radius: 8px;">
+            " Mental Wellness: Incorporate mindfulness practices into your daily routine. Simple techniques like deep breathing, journaling, or using guided meditation apps (many are free or have free versions) can help reduce anxiety and improve emotional well-being.
+            <br> Physical Wellness: Stress management techniques, such as deep breathing, progressive muscle relaxation, or aromatherapy (with accessible essential oils), can help lower physical tension and improve sleep."
+        </div>
+
+        
+        </div>
+        <div class="item" style="background-color: #e4d8d8; color: rgb(247, 241, 241); display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%; height: 100vh; padding: 20px; text-align: center; border-radius: 0px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); position: relative;">
+            <img src="/pexels-silverkblack-23224745.jpg" alt="Image 3" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; filter: blur(1.5px);">
+            <p style="position: relative; z-index: 1; color: white; font-size: 1.5rem; max-width: 90%; margin: 0 auto; padding: 20px; background-color: rgba(0, 0, 0, 0.4); border-radius: 8px;">
+                Physical and Mental Wellness: Routines create structure, which supports both physical and mental health. Start your day with a morning routine that includes stretching, drinking water, and a few minutes of mindful breathing. End the day with a calming ritual, such as reading, journaling, or doing a relaxation exercise.
+            <h1  style="position: absolute; bottom: 120px; right: 200px; z-index: 2;display: flex; padding: 25px 70px; color: rgba(255, 255, 255, 0.884); border: none; border-radius: 15px; font-size: 2rem; cursor: pointer; background-color: rgba(0, 0, 0, 0.4);  ;">Lets get Started!</h1>
+        
+            <a href="/log-in.html" style="position: absolute; bottom: 50px; right: 150px; z-index: 2; padding: 25px 70px; background-color: rgb(21, 0, 255); color: rgb(0, 0, 0); text-decoration: none; border-radius: 15px; font-size: 1rem; cursor: pointer;">
+                Let's get started!
+            </a>
+            </div>
+        <footer>
+            
+            <div style="background-color:#333; color:white; text-align:center; padding:20px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+                <ul style="list-style:none; padding:0; display: flex; justify-content: center;">
+                    <li style="margin-right: 15px;"><a href="/privacy-policy" style="color:white; text-decoration:none;">Privacy Policy</a></li>
+                    <li style="margin-right: 15px;"><a href="/terms-of-service" style="color:white; text-decoration:none;">Terms of Service</a></li>
+                    <li style="margin-right: 15px;"><a href="/contact" style="color:white; text-decoration:none;">Contact Us</a></li>
+                </ul>
+                <p>Follow us:</p>
+                <div style="display: flex; justify-content: center;">
+                    <a href="https://www.facebook.com" style="color:white; text-decoration:none; margin-right: 15px;">Facebook</a>
+                    <a href="https://www.twitter.com" style="color:white; text-decoration:none; margin-right: 15px;">Twitter</a>
+                    <a href="https://www.instagram.com" style="color:white; text-decoration:none;">Instagram</a>
+                </div>
+            </div>
+            
+            <div class="container" style="color: rgb(235, 0, 0);">
+        
+                <div id="map">
+                </div>
+                
+            <script src="leafletmap.js"></script>     
+            
+        <div>
+    </footer>
+    
+
+            
+        </div>
+    
+    </body>
+    </html>
