@@ -38,10 +38,11 @@
     <header style="display: flex; align-items: left; justify-content: left; gap: 20px;">
         <img src="logo fitness.jpg" alt="description" width="100" height="70">        
         <nav style="display: flex; justify-content: center; gap: 20px; width: 60%;">
-            <a href="index.html" style="padding: 14px 100px;position: absolute;top: 0;left: 0; text-decoration: none; color: black;font-family: 'Roboto', sans-serif;">Home Workout</a>
+          
 
            
         </nav>
+        <a href="startworkout.html"class="button" style="padding: 14px 100px;position: absolute;top: 0;left: 0; text-decoration: none; color: black;font-family: 'Roboto', sans-serif;">BACK</a>
     </header>
     <div class="container" style="width: 100%; height: 500px; margin: 100px auto;">
  
@@ -51,7 +52,7 @@
             <button class="button" onclick="startTimer('step1', 180)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Warm-up Timer</button>
             <div id="timer-step1" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">3:00</div>
             <button class="button" onclick="showNextStep('step1')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
-            <img src="weight-8246973_1920.jpg" alt="Image 3" style="position: absolute; top: 45%; right: 35%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
+            <img src="cool down.jpg" alt="Image 3" style="position: absolute; top: 45%; right: 10%; transform: translateY(-50%); width: 40%; height: 10%; object-fit: cover; height: 30vh;">
         </div>
 
 
@@ -130,11 +131,18 @@
             <button class="button" onclick="startTimer('step8', 60)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Timer for cooldown</button>
             <div id="timer-step9" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">5:00</div>
             <button class="button" onclick="showNextStep('step9')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
-            <img src="cool down.jpg" alt="Image 3" style="position: absolute; top: 40%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
+            <img src="cool down.jpg" alt="Image 3" style="position: absolute; top: 40%; right: 10%; transform: translateY(-50%); width: 40%; height: 10%; object-fit: cover; height: 30vh;">
         </div>
         
-
-    </div>
+        <div id="step10" class="workout-step" style="height: 70vh; display: none; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h1>Congratulations, Keep it up!</h1>
+            <br><br><br>
+            <h2 style="text-decoration-color: blue;">Your total workout time was: <span id="total-time">0:00</span ></h2>
+            <br><br>
+            
+                <a href="startworkout.html" class="button" onclick="finishWorkout('startworkout')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Finish Workout</a>
+            <img src="celebrate.avif" alt="Image 3" style="position: absolute; top: 60%; right: 10%; transform: translateY(-50%); width: 60%; height: 40%; object-fit: cover; height: 50vh;">
+        </div>
 
     
     <script  src="hard.js"></script>
