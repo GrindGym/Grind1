@@ -1,64 +1,46 @@
+let totalTime = 0;  // Variable to store total time in seconds
 
-let totalTime = 0;
-let globalInterval;
-
-function startTimer(step, seconds) {
+// Function to start the timer
+function startTimer(step, duration) {
+    let remainingTime = duration;
     let timerDisplay = document.getElementById('timer-' + step);
-    let button = document.querySelector(`#${step} .button`);
-    let remainingTime = seconds;
-
-    totalTime += seconds;
-    button.disabled = true;
-
-    let interval = setInterval(function() {
-        remainingTime--;
-        let minutes = Math.floor(remainingTime / 60);
-        let secs = remainingTime % 60;
-        timerDisplay.textContent = `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-
+    const interval = setInterval(function() {
         if (remainingTime <= 0) {
             clearInterval(interval);
-            showNextStep(step);
+        } else {
+            remainingTime--;
+            let minutes = Math.floor(remainingTime / 60);
+            let seconds = remainingTime % 60;
+            timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
         }
     }, 1000);
 
-    globalInterval = interval;
+    // Add the duration of the current step to the total time
+    totalTime += duration;
 }
 
+// Function to show the next step
 function showNextStep(currentStep) {
-    let currentElement = document.getElementById(currentStep);
-    currentElement.classList.remove('active');
-    currentElement.style.display = 'none';
+    const currentStepElement = document.getElementById(currentStep);
+    currentStepElement.style.display = 'none';
 
-    let nextStep = parseInt(currentStep.replace('step', '')) + 1;
-    let nextStepId = 'step' + nextStep;
-
-    if (document.getElementById(nextStepId)) {
-        let nextElement = document.getElementById(nextStepId);
-        nextElement.classList.add('active');
-        nextElement.style.display = 'block';
+    const nextStep = parseInt(currentStep.replace('step', '')) + 1;
+    const nextStepElement = document.getElementById('step' + nextStep);
+    if (nextStepElement) {
+        nextStepElement.style.display = 'block';
     }
 }
 
+// Function to finish the workout and show total time
 function finishWorkout(step) {
-    const steps = document.querySelectorAll('.workout-step');
-    steps.forEach(stepElement => {
-        stepElement.style.display = 'none';
-    });
+    const totalMinutes = Math.floor(totalTime / 60);
+    const totalSeconds = totalTime % 60;
+    document.getElementById('total-time').textContent = `${totalMinutes}:${totalSeconds < 10 ? '0' + totalSeconds : totalSeconds}`;
 
-    const congratsSection = document.getElementById('congratulations');
-    congratsSection.style.display = 'block';
+    // Hide the current step and show the congratulation screen
+    const currentStepElement = document.getElementById(step);
+    currentStepElement.style.display = 'none';
 
-    let totalTime = 0;
-    const timers = document.querySelectorAll('.timer');
-    timers.forEach(timer => {
-        const timeText = timer.textContent;
-        const [minutes, seconds] = timeText.split(':').map(Number);
-        totalTime += minutes * 60 + seconds;
-    });
-
-    const totalTimeElement = document.getElementById('total-time');
-    const minutes = Math.floor(totalTime / 60);
-    const seconds = totalTime % 60;
-    totalTimeElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    const finalStepElement = document.getElementById('step11');
+    finalStepElement.style.display = 'block';
 }
