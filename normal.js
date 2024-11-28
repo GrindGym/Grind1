@@ -1,6 +1,6 @@
-let totalTime = 0;  // Variable to store total time in seconds
+let totalTime = 0; 
 
-// Function to start the timer
+
 function startTimer(step, duration) {
     let remainingTime = duration;
     let timerDisplay = document.getElementById('timer-' + step);
@@ -15,11 +15,11 @@ function startTimer(step, duration) {
         }
     }, 1000);
 
-    // Add the duration of the current step to the total time
+   
     totalTime += duration;
 }
 
-// Function to show the next step
+
 function showNextStep(currentStep) {
     const currentStepElement = document.getElementById(currentStep);
     currentStepElement.style.display = 'none';
@@ -31,13 +31,12 @@ function showNextStep(currentStep) {
     }
 }
 
-// Function to finish the workout and show total time
+
 function finishWorkout(step) {
     const totalMinutes = Math.floor(totalTime / 60);
     const totalSeconds = totalTime % 60;
     document.getElementById('total-time').textContent = `${totalMinutes}:${totalSeconds < 10 ? '0' + totalSeconds : totalSeconds}`;
 
-    // Hide the current step and show the congratulation screen
     const currentStepElement = document.getElementById(step);
     currentStepElement.style.display = 'none';
 
