@@ -15,7 +15,7 @@ function startTimer(step, duration) {
         }
     }, 1000);
 
-    // Add the duration of the current step to the total time
+
     totalTime += duration;
 }
 
