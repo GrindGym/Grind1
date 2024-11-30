@@ -20,7 +20,8 @@ class SimpleMapHandler {
     addLocationMarker(coords) {
 
         const marker = L.marker(coords).addTo(this.mapInstance);
-        marker.bindPopup("Colex at Manolo Fortich Bukidnon").openPopup();
+
+        marker.bindPopup(   "       Join Our Community now! <br> Colex at Manolo Fortich Bukidnon").openPopup();
     }
 }
 
