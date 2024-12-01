@@ -40,8 +40,7 @@
         <nav style="display: flex; justify-content: center; gap: 20px; width: 60%;">
           
   
-            
-            
+         
         </nav>
         <a href="startworkout.html"class="button" style="padding: 14px 100px;position: absolute;top: 0;left: 0; text-decoration: none; color: black;font-family: 'Roboto', sans-serif;">BACK</a>
     </header>
@@ -49,12 +48,16 @@
  
         <div id="step1" class="workout-step active" style="display: block; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
             <h2>Step 1: Warm-up</h2>
-            <p>3 minutes of high-intensity dynamic stretching (leg swings, arm circles) & jumping jacks.</p>
+            <p>3 minutes of high-intensity dynamic stretching <br> (leg swings, arm circles) .</p>
             <button class="button" onclick="startTimer('step1', 180)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Warm-up Timer</button>
             <div id="timer-step1" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">3:00</div>
             <button class="button" onclick="showNextStep('step1')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
-            <img src="cool down.jpg" alt="Image 3" style="position: absolute; top: 45%; right: 10%; transform: translateY(-50%); width: 40%; height: 10%; object-fit: cover; height: 30vh;">
+            <img src="col3.gif" alt="Image 3" style="position: absolute; top: 60%; right: 18%; transform: translateY(-50%); width: 20%; height: 20%; object-fit: cover; height: 40vh;">
+            <img src="col2.gif" alt="Image 3" style="position: absolute; top: 60%; right: 1%; transform: translateY(-50%); width: 20%; height: 20%; object-fit: cover; height: 40vh;">
+            <img src="images.jfif" alt="Image 3" style="position: absolute; top: 60%; right: 38%; transform: translateY(-50%); width: 20%; height: 20%; object-fit: cover; height: 40vh;">
+            <img src="cir.gif" alt="Image 3" style="position: absolute; top: 60%; right: 60%; transform: translateY(-50%); width: 20%; height: 20%; object-fit: cover; height: 40vh;">
         </div>
+   
 
 
         <div id="step2" class="workout-step" style="display: none; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
@@ -63,17 +66,17 @@
             <button class="button" onclick="startTimer('step2', 60)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Timer for Pistol Squats</button>
             <div id="timer-step2" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">1:00</div>
             <button class="button" onclick="showNextStep('step2')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
-            <img src="pistol squat.jpg" alt="Image 3" style="position: absolute; top: 45%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
+            <img src="pistol.gif" alt="Image 3" style="position: absolute; top:50%; right: 40%; transform: translateY(-50%); width: 20%; height: 30%; object-fit: cover; height: 50vh;">
         </div>
 
   
         <div id="step3" class="workout-step" style="display: none; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-            <h2>Step 3: Bulgarian Split Squats (Weighted)</h2>
-            <p>4 sets of 10 reps per leg (use dumbbells or a weighted vest for extra resistance).</p>
+            <h2>Step 3: Bulgarian Split Squats</h2>
+            <p>4 sets of 10 reps per leg </p>
             <button class="button" onclick="startTimer('step3', 60)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Timer for Split Squats</button>
             <div id="timer-step3" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">1:00</div>
             <button class="button" onclick="showNextStep('step3')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
-            <img src="weight.png" alt="Image 3" style="position: absolute; top: 45%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
+            <img src="bulgarian.gif" alt="Image 3" style="position: absolute; top: 50%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 50vh;">
         </div>
 
 
@@ -83,26 +86,26 @@
             <button class="button" onclick="startTimer('step4', 45)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Timer for Push-ups</button>
             <div id="timer-step4" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">0:45</div>
             <button class="button" onclick="showNextStep('step4')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
-            <img src="archer.jfif" alt="Image 3" style="position: absolute; top: 45%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
+            <img src="arch.gif" alt="Image 3" style="position: absolute; top: 60%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
         </div>
 
         <div id="step5" class="workout-step" style="display: none; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-            <h2>Step 5: Side Planks with Leg Raises</h2>
+            <h2>Step 5: Side Planks with Leg Raises both left and right</h2>
             <p>3 sets of 45 seconds per side with 15 leg raises per side.</p>
             <button class="button" onclick="startTimer('step5', 30)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Timer for Side Plank</button>
             <div id="timer-step5" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">0:30</div>
             <button class="button" onclick="showNextStep('step5')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
-            <img src="sllide.jfif" alt="Image 3" style="position: absolute; top: 45%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
+            <img src="side.gif" alt="Image 3" style="position: absolute; top: 60%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
         </div>
 
  
         <div id="step6" class="workout-step" style="display: none; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-            <h2>Step 6: Explosive Box Jumps</h2>
+            <h2>Step 6: plyometric push up </h2>
             <p>3 sets of 10 reps.</p>
             <button class="button" onclick="startTimer('step6', 60)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Timer for Box Jumps</button>
             <div id="timer-step6" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">1:00</div>
             <button class="button" onclick="showNextStep('step6')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
-            <img src="exp.png" alt="Image 3" style="position: absolute; top: 45%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
+            <img src="plyometric-push-ups.gif" alt="Image 3" style="position: absolute; top: 45%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
         </div>
 
 
@@ -112,8 +115,8 @@
             <button class="button" onclick="startTimer('step7', 45)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Timer for Handstand Push-ups</button>
             <div id="timer-step7" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">0:45</div>
             <button class="button" onclick="showNextStep('step7')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
-            <img src="stand.png" alt="Image 3" style="position: absolute; top: 45%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
-            <img src="pike.png" alt="Image 3" style="position: absolute; top: 45%; right: 10%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
+            <img src="handstand-pushup.gif" alt="Image 3" style="position: absolute; top: 50%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 40vh;">
+            <img src="pike.gif" alt="Image 3" style="position: absolute; top: 57%; right: 10%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
         </div>
 
 
@@ -123,7 +126,7 @@
             <button class="button" onclick="startTimer('step8', 60)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Timer for Dragon Flags</button>
             <div id="timer-step8" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">1:00</div>
             <button class="button" onclick="showNextStep('step8')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
-            <img src="dra.jfif" alt="Image 3" style="position: absolute; top: 45%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
+            <img src="dragon.gif" alt="Image 3" style="position: absolute; top: 45%; right: 40%; transform: translateY(-50%); width: 20%; height: 10%; object-fit: cover; height: 30vh;">
         </div>
 
         <div id="step9" class="workout-step" style="display: none; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
@@ -132,7 +135,11 @@
             <button class="button" onclick="startTimer('step8', 60)" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Start Timer for cooldown</button>
             <div id="timer-step9" class="timer" style="font-size: 24px; font-weight: bold; color: #f00; margin-top: 20px;">5:00</div>
             <button class="button" onclick="showNextStep('step9')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Next Workout</button>
-            <img src="cool down.jpg" alt="Image 3" style="position: absolute; top: 40%; right: 10%; transform: translateY(-50%); width: 40%; height: 10%; object-fit: cover; height: 30vh;">
+            <img src="col3.gif" alt="Image 3" style="position: absolute; top: 60%; right: 18%; transform: translateY(-50%); width: 20%; height: 20%; object-fit: cover; height: 40vh;">
+            <img src="col2.gif" alt="Image 3" style="position: absolute; top: 60%; right: 1%; transform: translateY(-50%); width: 20%; height: 20%; object-fit: cover; height: 40vh;">
+            <img src="images.jfif" alt="Image 3" style="position: absolute; top: 60%; right: 38%; transform: translateY(-50%); width: 20%; height: 20%; object-fit: cover; height: 40vh;">
+            <img src="cir.gif" alt="Image 3" style="position: absolute; top: 60%; right: 60%; transform: translateY(-50%); width: 20%; height: 20%; object-fit: cover; height: 40vh;">
+
         </div>
         
         <div id="step10" class="workout-step" style="height: 70vh; display: none; margin: 20px 0; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
@@ -142,7 +149,6 @@
             <br><br>
             
                 <a href="startworkout.html" class="button" onclick="finishWorkout('startworkout')" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Finish Workout</a>
-            <img src="celebrate.avif" alt="Image 3" style="position: absolute; top: 60%; right: 10%; transform: translateY(-50%); width: 60%; height: 40%; object-fit: cover; height: 50vh;">
         </div>
 
     
