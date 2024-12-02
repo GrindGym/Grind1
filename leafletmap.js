@@ -21,7 +21,7 @@ class SimpleMapHandler {
 
         const marker = L.marker(coords).addTo(this.mapInstance);
 
-        marker.bindPopup(   "       Join Our Community now! <br> Colex at Manolo Fortich Bukidnon").openPopup();
+        marker.bindPopup(   "       Join Our Community now! <br>  At Colex Manolo Fortich Bukidnon").openPopup();
     }
 }
 
