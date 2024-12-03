@@ -1,5 +1,6 @@
 class UserRegistration {
     constructor(formId, welcomeMessageId, continueButtonId) {
+        // Encapsulation
         this.form = document.getElementById(formId);
         this.welcomeMessage = document.getElementById(welcomeMessageId);
         this.continueButton = document.getElementById(continueButtonId);
@@ -8,32 +9,31 @@ class UserRegistration {
         this.membershipType = document.getElementById("membershipType");
         this.membershipSelect = document.getElementById("membership");
         this.membershipInfo = document.getElementById("membershipInfo");
+        
+       
         this.init();
     }
 
-
+    // Abstraction:
+    // Users do not need to know the details of how events are handled, just that they will trigger.
     init() {
         this.form.addEventListener("submit", (event) => this.handleSubmit(event));
         this.membershipSelect.addEventListener("change", () => this.updatePrice());
     }
-
-  
     handleSubmit(event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         let password = document.getElementById("password").value;
         if (this.isPasswordValid(password)) {
             let fullName = document.getElementById("fullName").value;
             let selectedMembership = this.getSelectedMembership();
-
             this.displayUserInfo(fullName, selectedMembership);
             this.showWelcomeMessage();
         } else {
+          
             this.showPasswordError();
         }
     }
-
-
     isPasswordValid(password) {
         return password.length >= 6;
     }
@@ -41,31 +41,25 @@ class UserRegistration {
     showPasswordError() {
         this.passwordError.textContent = "Password must be at least 6 characters long.";
     }
-
     getSelectedMembership() {
         return this.membershipSelect.options[this.membershipSelect.selectedIndex].text;
     }
-
-
     displayUserInfo(fullName, selectedMembership) {
         this.userName.textContent = fullName;
         this.membershipType.textContent = selectedMembership;
     }
 
-
     showWelcomeMessage() {
-        this.welcomeMessage.style.display = "block"; 
-        this.continueButton.style.display = "block"; 
-    }
 
-   
+        this.welcomeMessage.style.display = "block";
+        this.continueButton.style.display = "block";
+    }
     updatePrice() {
         const selectedOption = this.membershipSelect.options[this.membershipSelect.selectedIndex].value;
         let price = this.getMembershipPrice(selectedOption);
         this.membershipInfo.textContent = `Selected membership costs: P${price} per month.`;
     }
-
-    
+    // Abstraction: Defines membership price based on selection.
     getMembershipPrice(option) {
         switch (option) {
             case "premium":
@@ -76,8 +70,6 @@ class UserRegistration {
                 return 200;
         }
     }
-
-   
     continueAction() {
         this.form.reset();
         this.welcomeMessage.style.display = "none";
